@@ -2,7 +2,7 @@
 # Flask App CI/CD with Jenkins and EC2 Deployment
 
 This project demonstrates a complete CI/CD pipeline using **Jenkins** to deploy a simple **Flask Python app** to a target **Ubuntu EC2 instance**. It also optionally includes GitHub webhook integration to trigger the pipeline on each code push.
-![Uploading ChatGPT Image Jul 12, 2025, 09_29_09 PM.png…]()
+
 
 ---
 
