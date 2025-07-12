@@ -23,6 +23,9 @@ pipeline {
                     sshUserPrivateKey(credentialsId: 'EC2_PRIVATE_KEY', keyFileVariable: 'EC2_KEY')
                 ]) {
                     sh '''#!/bin/bash
+                    echo "✅ DEBUG: SSH key file = $EC2_KEY"
+                    ls -l "$EC2_KEY"
+                    head -n 2 "$EC2_KEY"
                     SSH_OPTIONS="-o StrictHostKeyChecking=no"
 
                     chmod 400 "$EC2_KEY"
