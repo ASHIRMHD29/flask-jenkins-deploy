@@ -6,15 +6,12 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/your-username/flask-jenkins-deploy.git'
-            }
-        }
-
         stage('Package App') {
             steps {
-                sh 'tar -czf python-app.tar.gz app.py requirements.txt deploy.sh'
+                sh '''
+                chmod +x deploy.sh
+                tar -czf python-app.tar.gz app.py requirements.txt deploy.sh
+                '''
             }
         }
 
